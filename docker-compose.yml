@@ -1,11 +1,9 @@
-version: "3.8"
-
 services:
   app:
     build: .
     volumes:
       - admin-laufane-data:/var/www/html
-    container_name: ${CONTAINER_NAME_PREFIX}-app
+    container_name: ${PREFIX}-app
     restart: unless-stopped
     networks:
       - admin-laufane-network
@@ -17,7 +15,7 @@ services:
     volumes:
       - admin-laufane-data:/var/www/html:ro
       - ./docker-nginx.conf:/etc/nginx/conf.d/default.conf
-    container_name: ${CONTAINER_NAME_PREFIX}-nginx-server
+    container_name: ${PREFIX}-nginx
     depends_on:
       - app
     restart: unless-stopped

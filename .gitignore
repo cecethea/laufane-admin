@@ -1,7 +1,9 @@
 node_modules/
-admin/
+admin.zip/
+admin.zip
 .env/
 .env
 .env.local
 .env.development
 .env.test
+.vscode/    
