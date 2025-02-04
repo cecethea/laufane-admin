@@ -45,3 +45,5 @@ RUN mkdir -p storage/logs/ storage/debugbar/ storage/framework/cache/ storage/fr
     && chmod -R 777 storage bootstrap/cache \
     && chmod 777 -R storage \
     && chmod 777 -R resources/lang
+
+RUN php artisan websockets:serve
